@@ -26,7 +26,7 @@ public class Kolbasa extends Product{
     }
     @Override
     public String toString (){
-        return "Название"+name+"Тип"+tip+"Вес"+ves+"Стоимость"+cost;
+        return "Название: "+name+"\nТип"+tip+"\nВес"+ves+"\nСтоимость"+cost;
     }
 
 }

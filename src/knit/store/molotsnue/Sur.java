@@ -2,7 +2,7 @@ package knit.store.molotsnue;
 
 //import knit.Molostnui;
 
-import knit.Molostnui;
+import knit.store.molotsnue.Molostnui;
 
 import java.util.Scanner;
 
