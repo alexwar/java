@@ -17,7 +17,9 @@ public class Application {
             ProductFactory test =new ProductFactory();
             for (int i = 0; i < kol; i++) {
                 try {
-                    arr[i] = test.nextProduct(tm);
+                    String klass=tm.next();
+                    arr[i] = test.nextProduct(klass);
+                    arr[i].init(tm);
                 } catch (Exception e) {
                     System.out.printf("Неизвестный класс");
                 }
