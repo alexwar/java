@@ -1,31 +1,35 @@
-package knit; /**
- * Created by alex on 29.09.16.
- */
+package knit;
+import java.util.Scanner;
 import knit.enums.ProductFactory;
 import knit.store.Product;
 
-import java.util.Scanner;
 
 public class Application {
     public static void main(String[] arg) {
             //FileInputStream f = new FileInputStream("~/test2");
             Scanner tm = new Scanner(System.in);
             System.out.print("товары: ");
-
-            int kol = tm.nextInt();
+            int kol=0;
+            try {
+                kol = tm.nextInt();
+            } catch (Exception e) {
+                System.out.printf("Неверный ввод числа");
+            }
             Product arr[] = new Product[kol];
-            ProductFactory test =new ProductFactory();
+            ProductFactory factory =new ProductFactory();
             for (int i = 0; i < kol; i++) {
                 try {
                     String klass=tm.next();
-                    arr[i] = test.nextProduct(klass);
+                    arr[i] = factory.nextProduct(klass);
                     arr[i].init(tm);
                 } catch (Exception e) {
                     System.out.printf("Неизвестный класс");
                 }
             }
-            for (int i = 0; i<arr.length; i++)
-                System.out.printf(arr[i].toString());
+        for (Product i: arr) {
+            System.out.printf(i.toString());
+        }
+
     }
 }
 

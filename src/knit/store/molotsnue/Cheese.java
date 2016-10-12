@@ -1,5 +1,6 @@
 package knit.store.molotsnue;
 
+import java.text.MessageFormat;
 import java.util.Scanner;
 
 
@@ -13,6 +14,7 @@ public class Cheese extends Milky {
     }
     @Override
     public String toString(){
-        return super.toString()+"\nМасса(гр): "+ weight;
+        String str= "{0}\nМасса: {1}";
+        return MessageFormat.format(str, super.toString(), weight);
     }
 }

@@ -12,7 +12,6 @@ public class Milk extends Milky {
         super.init(scanner);
         System.out.printf("Жиронсть: ");
         fatness =scanner.nextFloat();
-        cost=scanner.nextInt();
     }
     @Override
     public String toString(){

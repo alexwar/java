@@ -10,7 +10,7 @@ public class Liverwurst extends Sausage {
     @Override
     public void init(Scanner scanner){
         super.init(scanner);
-        System.out.printf("Категория ливерной колбасы: ");
+        System.out.println("Категория ливерной колбасы: ");
         category =scanner.next();
     }
     @Override

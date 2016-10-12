@@ -20,6 +20,6 @@ public class Milky extends Product {
 
     @Override
     public String toString(){
-        return "Молочный продукт: "+name+"\nCрок годности(дней): "+Integer.toString(godd)+"\nCтоимость: "+Integer.toString(cost);
+        return "Молочный продукт: "+name+"\nCрок годности(дней): "+godd+"\nCтоимость: "+cost;
     }
 }
